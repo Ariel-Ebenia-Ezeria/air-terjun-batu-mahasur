@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    @include('sweetalert::alert')
     <!-- Header Section Start -->
     <header id="home" class="hero-area">
         <div class="overlay">

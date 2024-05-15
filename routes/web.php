@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingController::class, 'index'])->name('home');
+Route::post('/kirim-ulasan', [LandingController::class, 'ulasan'])->name('kirim-ulasan');
 
 Route::middleware([
     'auth:sanctum',

@@ -21,24 +21,24 @@
         <div class="row">
             <!-- Start Col -->
             <div class="col-lg-6 col-md-12">
-                <form id="contactForm" method="POST" enctype="multipart/form-data">
+                <form id="contactForm" method="POST" action="{{ route('kirim-ulasan') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Nama"
+                                <input type="text" class="form-control" id="name" name="nama" placeholder="Nama"
                                     required data-error="Please enter your name">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-12">
                             <div class="form-group">
                                 <input type="number" placeholder="Berikan Penilaian 1-5" id="msg_subject"
                                     class="form-control" name="msg_subject" required
                                     data-error="Please enter your subject">
                                 <div class="help-block with-errors"></div>
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="email" name="email" placeholder="Email"
@@ -55,7 +55,7 @@
                         </div> --}}
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" id="message" name="message"
+                                <textarea class="form-control" id="message" name="ulasan"
                                     placeholder="Berikan Ulasan Anda" rows="4" data-error="Write your message"
                                     required></textarea>
                                 <div class="help-block with-errors"></div>
