@@ -13,7 +13,11 @@ Ulasan
 <div class="content-start transition ">
     <div class="container-fluid dashboard">
         <div class="content-header">
-            <h1>Galeri</h1>
+            <h1>Galeri
+
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#tambah">+</button>
+            </h1>
         </div>
 
         <section class="section">
@@ -28,47 +32,54 @@ Ulasan
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th width="3%">No</th>
                                         <th>Nama</th>
-                                        <th>Tanggal</th>
-                                        <th>Ulasan</th>
+                                        <th>Kategori</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php
+                                    $no=1;
+                                    @endphp
+                                    @forelse ( $galeris as $galeri )
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>2011-04-25</td>
-                                        <td>61</td>
-                                        <td>$320,800</td>
+                                        <td>{{ $no++ }}</td>
+                                        <td class="text-center">
+                                            <img src="{{ Storage::url($galeri->nama_file) }}" alt=""
+                                                style="width: 250px" />
+                                        </td>
+                                        <td>{{ $galeri->kategori }}</td>
+                                        <td>
+                                            <a href="{{ route('galeri.destroy', $galeri->id) }}"
+                                                class="btn btn-icon btn-danger" data-confirm-delete="true">
+                                                <i class="far fa-trash-alt"></i>
+                                            </a>
+                                        </td>
                                     </tr>
+                                    @empty
                                     <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>2011-07-25</td>
-                                        <td>63</td>
-                                        <td>$170,750</td>
+                                        <td colspan="4" class="text-center">
+                                            <h1>Belum Ada Galeri</h1>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td>Donna Snider</td>
-                                        <td>2011-01-25</td>
-                                        <td>27</td>
-                                        <td>$112,000</td>
-                                    </tr>
+                                    @endforelse
                                 </tbody>
-                                <tfoot>
+                                {{-- <tfoot>
                                     <tr>
+                                        <th>No</th>
                                         <th>Nama</th>
-                                        <th>Tanggal</th>
-                                        <th>Ulasan</th>
+                                        <th>Kategori</th>
                                         <th>Aksi</th>
                                     </tr>
-                                </tfoot>
+                                </tfoot> --}}
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        @include('pages.dashboard.galeris.modal')
     </div><!-- End Container-->
 </div><!-- End Content-->
 @endsection

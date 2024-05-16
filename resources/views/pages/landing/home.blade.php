@@ -64,20 +64,18 @@ Air Terjun Batu Mahasur
             <!-- Start Col -->
             <div class="pl-0 pr-5 col-lg-6 col-md-12 pt-70">
                 <div class="business-item-img">
-                    <img src="/assets/landing/img/business/business-img.png" class="img-fluid" alt="">
+                    <img src="{{ Storage::url($tentang->nama_file) }}" class="img-fluid" alt="">
                 </div>
             </div>
             <!-- End Col -->
             <!-- Start Col -->
             <div class="pl-4 col-lg-6 col-md-12">
                 <div class="business-item-info">
-                    <h3>Crafted For Business, Startup and Agency Websites</h3>
+                    <h3>Air Terjun Batu Mahasur</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in
                         reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-                    <a class="btn btn-common" href="#">download</a>
                 </div>
             </div>
             <!-- End Col -->
@@ -89,7 +87,7 @@ Air Terjun Batu Mahasur
 
 
 <!-- Cool Fetatures Section Start -->
-<section id="features" class="section">
+{{-- <section id="features" class="section">
     <div class="container">
         <!-- Start Row -->
         <div class="row">
@@ -215,7 +213,7 @@ Air Terjun Batu Mahasur
         </div>
         <!-- End Row -->
     </div>
-</section>
+</section> --}}
 <!-- Cool Fetatures Section End -->
 
 

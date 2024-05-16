@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Galeri;
 use Illuminate\Http\Request;
 
 class GaleriController extends Controller
@@ -14,7 +15,13 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard.galeris.index');
+        $data = [
+            'galeris' => Galeri::all()
+        ];
+        $title = 'Hapus Data Galeri!';
+        $text = "Apakah kamu yakin ingin menghapus Data Galeri?";
+        confirmDelete($title, $text);
+        return view('pages.dashboard.galeris.index', $data);
     }
 
     /**
@@ -35,7 +42,11 @@ class GaleriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['nama_file'] = $request->file('nama_file')->store('assets/galeri', 'public');
+
+        Galeri::create($data);
+        return redirect()->back()->with('success', 'Galeri berhasil ditambahkan');
     }
 
     /**
@@ -78,8 +89,9 @@ class GaleriController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Galeri $galeri)
     {
-        //
+        $galeri->delete();
+        return redirect()->back()->with('success', 'Galeri berhasil di hapus');
     }
 }

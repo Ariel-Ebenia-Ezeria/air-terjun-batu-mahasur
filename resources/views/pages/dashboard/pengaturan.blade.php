@@ -74,7 +74,7 @@ Profile
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title">Tentang Kami</h4>
-                            <em>summernote</em>
+                            {{-- <em>summernote</em> --}}
                         </div>
                         <div class="card-body">
                             <div id="summernote"></div>

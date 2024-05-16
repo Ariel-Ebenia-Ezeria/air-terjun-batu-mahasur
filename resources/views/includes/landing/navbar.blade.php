@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
     <div class="container">
-        <a href="index.html" class="navbar-brand"><img src="/assets/landing/img/logo.png" alt=""></a>
+        <a href="{{ route('home') }}" class="navbar-brand"><img src="/assets/landing/img/logo1.png" style="width: 68px"
+                alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="lni-menu"></i>
@@ -13,9 +14,9 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#services">Tentang</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link page-scroll" href="#features">Services</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#showcase">Galeri</a>
                 </li>

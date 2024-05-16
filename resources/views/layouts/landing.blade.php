@@ -38,20 +38,23 @@
             <div class="row space-100">
                 <div class="col-lg-6 col-md-12 col-xs-12">
                     <div class="contents">
-                        <h2 class="head-title">Air Terjun Batu Mahasur</h2>
-                        <p>Please, Purchase full version of Slick to get all pages, features and permission to use in
-                            commercial projects</p>
-                        <div class="header-button">
+                        <h2 class="head-title" style="font-size: 110px">Air Terjun</h2>
+                        <br>
+                        <h2 class="head-title" style="font-size: 75px">Batu Mahasur</h2>
+                        {{-- <p>Please, Purchase full version of Slick to get all pages, features and permission to use
+                            in
+                            commercial projects</p> --}}
+                        {{-- <div class="header-button">
                             <a href="https://rebrand.ly/slick-ud" rel="nofollow" target="_blank"
                                 class="btn btn-border-filled">Purchase Now</a>
                             <a href="https://rebrand.ly/slick-ud" rel="nofollow" target="_blank"
                                 class="btn btn-border page-scroll">Learn More</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="p-0 col-lg-6 col-md-12 col-xs-12">
                     <div class="intro-img">
-                        <img src="/assets/landing/img/intro.png" alt="">
+                        <img src="{{ Storage::url($home->nama_file) }}" alt="">
                     </div>
                 </div>
             </div>

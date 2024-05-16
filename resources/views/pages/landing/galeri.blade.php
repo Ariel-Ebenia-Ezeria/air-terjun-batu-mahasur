@@ -7,8 +7,8 @@
                     <div>
                         <h2 class="section-title">Galeri Kami</h2>
                         <div class="desc-text">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>
-                            <p>eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Beberapa Galeri Air Terjun Batu Mahasur</p>
+                            {{-- <p>eiusmod tempor incididunt ut labore et dolore.</p> --}}
                         </div>
                     </div>
                 </div>
@@ -20,9 +20,10 @@
         <div class="row justify-content-center showcase-area">
             <div class="pr-0 col-lg-12 col-md-12 col-xs-12">
                 <div class="showcase-slider owl-carousel">
+                    @forelse ($galeris as $galeri)
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="/assets/landing/img/showcase/01.jpg" class="img-fluid" alt="" />
+                            <img src="{{ Storage::url($galeri->nama_file) }}" class="img-fluid" alt="" />
                             <div class="text-center hover-content">
                                 <div class="fancy-table">
                                     <div class="table-cell">
@@ -31,7 +32,7 @@
                                             <h5>Redesign Slack</h5>
                                         </div>
                                         <div class="zoom-icon">
-                                            <a class="lightbox" href="img/showcase/01.jpg"><i
+                                            <a class="lightbox" href="{{ Storage::url($galeri->nama_file) }}"><i
                                                     class="lni-zoom-in"></i></a>
                                             <a href="#"><i class="lni-link"></i></a>
                                         </div>
@@ -41,7 +42,11 @@
 
                         </div>
                     </div>
-                    <div class="item">
+
+                    @empty
+
+                    @endforelse
+                    {{-- <div class="item">
                         <div class="screenshot-thumb">
                             <img src="/assets/landing/img/showcase/02.jpg" class="img-fluid" alt="" />
                             <div class="text-center hover-content">
@@ -423,7 +428,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

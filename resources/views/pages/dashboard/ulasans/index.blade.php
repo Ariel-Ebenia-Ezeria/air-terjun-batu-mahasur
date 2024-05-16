@@ -28,40 +28,40 @@ Ulasan
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th>No.</th>
                                         <th>Nama</th>
-                                        <th>Tanggal</th>
                                         <th>Ulasan</th>
-                                        <th>Aksi</th>
+                                        <th>Tanggal</th>
+                                        {{-- <th>Aksi</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @php
+                                    $no=1;
+                                    @endphp
+                                    @forelse ( $ulasans as $ulasan )
                                     <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>2011-04-25</td>
-                                        <td>61</td>
-                                        <td>$320,800</td>
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $ulasan->nama }}</td>
+                                        <td>{{ $ulasan->ulasan }}</td>
+                                        <td>{{ $ulasan->created_at }}</td>
                                     </tr>
+                                    @empty
                                     <tr>
-                                        <td>Garrett Winters</td>
-                                        <td>2011-07-25</td>
-                                        <td>63</td>
-                                        <td>$170,750</td>
+                                        <td colspan="4" class="text-center">
+                                            <h1>Belum Ada Ulasan</h1>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td>Donna Snider</td>
-                                        <td>2011-01-25</td>
-                                        <td>27</td>
-                                        <td>$112,000</td>
-                                    </tr>
+                                    @endforelse
                                 </tbody>
-                                <tfoot>
+                                {{-- <tfoot>
                                     <tr>
+                                        <th>No.</th>
                                         <th>Nama</th>
-                                        <th>Tanggal</th>
                                         <th>Ulasan</th>
-                                        <th>Aksi</th>
+                                        <th>Tanggal</th>
                                     </tr>
-                                </tfoot>
+                                </tfoot> --}}
                             </table>
                         </div>
                     </div>

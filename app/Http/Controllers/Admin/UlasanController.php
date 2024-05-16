@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ulasan;
 use Illuminate\Http\Request;
 
 class UlasanController extends Controller
@@ -14,7 +15,10 @@ class UlasanController extends Controller
      */
     public function index()
     {
-        return view('pages.dashboard.ulasans.index');
+        $data = [
+            'ulasans' => Ulasan::all()
+        ];
+        return view('pages.dashboard.ulasans.index', $data);
     }
 
     /**
