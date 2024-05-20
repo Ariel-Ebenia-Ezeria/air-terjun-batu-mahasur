@@ -19,9 +19,8 @@ Air Terjun Batu Mahasur
                     <div class="icon">
                         <i class="lni-cog"></i>
                     </div>
-                    <h4>Bootstrap 4</h4>
-                    <p>Share processes and data secure lona need to know basis Our team assured your web site is
-                        always safe.</p>
+                    <h4>Alamat</h4>
+                    <p>Jl. Damang Pijar, Kuala Kurun, Kec. Kurun, Kabupaten Gunung MAS, Kalimantan Tengah 74571</p>
                 </div>
             </div>
             <!-- End Col -->
@@ -31,9 +30,9 @@ Air Terjun Batu Mahasur
                     <div class="icon">
                         <i class="lni-brush"></i>
                     </div>
-                    <h4>Slick Design</h4>
-                    <p>Share processes and data secure lona need to know basis Our team assured your web site is
-                        always safe.</p>
+                    <h4>Fasilitas</h4>
+                    <p>Fasilitas-fasilitas yang tersedia di Air Terjun Batu Mahasur.</p>
+                    <ul>Toilet Umum <br> Gazebo<br>Panggung Hiburan<br>Ruang Ganti <br> Rumah Jaga</ul>
                 </div>
             </div>
             <!-- End Col -->
@@ -43,9 +42,19 @@ Air Terjun Batu Mahasur
                     <div class="icon">
                         <i class="lni-heart"></i>
                     </div>
-                    <h4>Crafted with Love</h4>
-                    <p>Share processes and data secure lona need to know basis Our team assured your web site is
-                        always safe.</p>
+                    <h4>Harga Tiket</h4>
+                    <p>Harga Tiket Hari Biasa</p>
+                    <li>Dewasa</li>
+                    <ul>Rp. 5.000/org</ul>
+                    <li>Anak-anak</li>
+                    <ul>Rp. 3.0000/org</ul>
+                    <p>Harga Tiket Akhir Pekan</p>
+                    <li>Dewasa</li>
+                    <ul>Rp. 10.000/org</ul>
+                    <li>Anak-anak</li>
+                    <ul>Rp. 5.0000/org</ul>
+
+                    
                 </div>
             </div>
             <!-- End Col -->
@@ -72,10 +81,10 @@ Air Terjun Batu Mahasur
             <div class="pl-4 col-lg-6 col-md-12">
                 <div class="business-item-info">
                     <h3>Air Terjun Batu Mahasur</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Air Terjun Batu Mahasur adalah sebuah air terjun yang berada di Desa Kuala Kurun, 
+                        Kecamatan Kurun, Kabupaten Gunung Mas, Provinsi Kalimantan Tengah, Indonesia. 
+                        Lokasinya yang sangat dekat dengan ibu kota kabupaten yakni hanya 1,5 Kilometer 
+                        membuat Air Terjun Batu Mahasur menjadi wisata andalan Kabupaten Gunung Mas.</p>
                 </div>
             </div>
             <!-- End Col -->
