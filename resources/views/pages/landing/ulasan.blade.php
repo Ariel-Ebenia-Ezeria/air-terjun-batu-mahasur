@@ -5,8 +5,7 @@
             <div class="col-md-12 col-sm-12">
                 <div class="text-center video-promo-content">
 
-                    <a id="play-video" class="video-play-button video-popup"
-                        href="https://www.youtube.com/watch?v=Y4fodpIwal8&list=RDXCElIIYx_8s&index=13">
+                    <a id="play-video" class="video-play-button video-popup" href="{{ $pengaturan->link_video }}">
                         <span></span>
                     </a>
 

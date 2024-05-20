@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Alert;
 use App\Http\Controllers\Controller;
+use App\Models\Galeri;
+use App\Models\Pengaturan;
+use App\Models\Ulasan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -12,7 +15,12 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('pages.dashboard.dashboard');
+        $data = [
+            'jumlahUlasan' => Ulasan::count(),
+            'jumlahGaleri' => Galeri::count(),
+            'ulasans' => Ulasan::take(10)->get()
+        ];
+        return view('pages.dashboard.dashboard', $data);
     }
 
     public function profile()
@@ -49,6 +57,17 @@ class DashboardController extends Controller
 
     public function pengaturan()
     {
-        return view('pages.dashboard.pengaturan');
+        $data = [
+            'pengaturan' => Pengaturan::firstOrFail()
+        ];
+        return view('pages.dashboard.pengaturan', $data);
+    }
+
+    public function updatePengaturan(Request $request)
+    {
+        $data = $request->all();
+        $pengaturan = Pengaturan::firstOrFail();
+        $pengaturan->update($data);
+        return redirect()->back()->with('success', 'Pengaturan berhasil diperbarui');
     }
 }

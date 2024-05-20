@@ -23,7 +23,7 @@
                     @forelse ($galeris as $galeri)
                     <div class="item">
                         <div class="screenshot-thumb">
-                            <img src="{{ Storage::url($galeri->nama_file) }}" class="img-fluid" alt="" />
+                            <img src="{{ Storage::url($galeri->nama_file) }}" class="img-fluid img-thumbnail" alt="" />
                             <div class="text-center hover-content">
                                 <div class="fancy-table">
                                     <div class="table-cell">

@@ -54,7 +54,7 @@ Air Terjun Batu Mahasur
                     <li>Anak-anak</li>
                     <ul>Rp. 5.0000/org</ul>
 
-                    
+
                 </div>
             </div>
             <!-- End Col -->
@@ -80,11 +80,8 @@ Air Terjun Batu Mahasur
             <!-- Start Col -->
             <div class="pl-4 col-lg-6 col-md-12">
                 <div class="business-item-info">
-                    <h3>Air Terjun Batu Mahasur</h3>
-                    <p>Air Terjun Batu Mahasur adalah sebuah air terjun yang berada di Desa Kuala Kurun, 
-                        Kecamatan Kurun, Kabupaten Gunung Mas, Provinsi Kalimantan Tengah, Indonesia. 
-                        Lokasinya yang sangat dekat dengan ibu kota kabupaten yakni hanya 1,5 Kilometer 
-                        membuat Air Terjun Batu Mahasur menjadi wisata andalan Kabupaten Gunung Mas.</p>
+                    <h3>{{ $pengaturan->nama_site }}</h3>
+                    {!! $pengaturan->tentang !!}
                 </div>
             </div>
             <!-- End Col -->

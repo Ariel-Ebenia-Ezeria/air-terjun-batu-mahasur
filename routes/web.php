@@ -29,6 +29,7 @@ Route::middleware([
     Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
     Route::post('/update-profile', [DashboardController::class, 'updateProfile'])->name('update-profile');
     Route::get('/pengaturan', [DashboardController::class, 'pengaturan'])->name('pengaturan');
+    Route::post('/update-pengaturan', [DashboardController::class, 'updatePengaturan'])->name('update-pengaturan');
     Route::resource('ulasan', UlasanController::class);
     Route::resource('galeri', GaleriController::class);
 });
